@@ -33,3 +33,5 @@ This POC contains below files:
 - app.py - Flask file
 - Procfile - HEROKU process file
 - requirements.txt - all libraries to install
+- model pickle file
+- index.html - file for front end
