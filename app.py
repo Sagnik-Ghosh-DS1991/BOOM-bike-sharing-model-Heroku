@@ -12,7 +12,7 @@ scaling=jb.load(r"./models/Boom_bike_scaling.pkl")
 def home():
     return render_template('index.html')
 
-@app.route('/prediction',methods=['POST'])
+@app.route('/prediction',methods=['POST','GET'])
 def predict():
     if (request.method=='POST'):
         features=[float(x) for x in request.form.values()]
