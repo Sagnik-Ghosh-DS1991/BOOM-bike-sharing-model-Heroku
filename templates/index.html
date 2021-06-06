@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html >
+<body align="center" style="background-image: url('https://cdn4.vectorstock.com/i/1000x1000/78/33/man-riding-bicycle-in-park-renting-bike-app-vector-25947833.jpg');">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model Deployment</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <style>
+      body {
+        font-family: 'Tangerine', serif;
+        font-size: 28px;
+	background-size: 950px 1030px;
+	background-size:repeat;
+      }
+	.button {
+  	background-color: #48D1CC;
+  	border: solid
+  	padding: 35px 32px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 21px;
+  	margin: 4px 4px;
+  	cursor: pointer;
+	}
+
+	.button1 {width: 105px; height: 40px; font-family: "Lucida Console", "Courier New", monospace;}
+	.p3 {
+  	font-family: "Lucida Console", "Courier New", monospace;
+	}
+    </style>
+
+
+</head>
+
+<body>
+ <div class="login">
+	<h1 style="text-align:center" class="p3">BOOM Bike Sharing Sales Prediction</h1>
+	<br>
+	<br>
+
+    <form align="center" action="{{ url_for('predict')}}"method="post">
+    	<input type="text" style="text-align:center; color: #000000; background-color: #EEE8AA; border :solid" name="September" placeholder="September (0 or 1)" required="required"/>
+        <br>
+        <input type="text" style="text-align:center; color: #000000; background-color: #EEE8AA; border :solid"  name="spring" placeholder="spring (0 or 1)" required="required" />
+        <br>
+		<input type="text" style="text-align:center; color: #000000; background-color: #EEE8AA; border :solid" name="summer" placeholder="summer (0 or 1)" required="required" />
+        <br>
+        <input type="text" style="text-align:center; color: #000000; background-color: #EEE8AA; border :solid" name="winter" placeholder="winter (0 or 1)" required="required" />
+        <br>
+        <input type="text" style="text-align:center; color: #000000; background-color: #EEE8AA; border :solid" name="Light Snow" placeholder="Light Snow (0 or 1)" required="required" />
+        <br>
+		<input type="text" style="text-align:center; color: #000000; background-color: #EEE8AA; border :solid" name="Mist and Cloudy" placeholder="Mist and Cloudy (0 or 1)" required="required" />
+        <br>
+        <input type="text" style="text-align:center; color: #000000; background-color: #EEE8AA; border :solid" name="year" placeholder="year (0 or 1)" required="required" />
+        <br>
+        <input type="text" style="text-align:center; color: #000000; background-color: #EEE8AA; border :solid" name="holiday" placeholder="holiday (0 or 1)" required="required" />
+        <br>
+		<input type="text" style="text-align:center; color: #000000; background-color: #EEE8AA; border :solid" name="temperature" placeholder="temperature (in Farhenhite)" required="required" />
+        <br>
+		<input type="text" style="text-align:center; color: #000000; background-color: #EEE8AA; border :solid" name="windspeed" placeholder="windspeed" required="required" />
+	<br>
+	<br>
+	<br>
+
+        <button align="center" type="submit" style="border :solid" class="button button1">Predict</button>
+    </form>
+    <br>
+
+
+     {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
